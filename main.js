@@ -25,7 +25,7 @@
 
           for(var i = totalTweets; startTweets < i; --i ) {
               var tweet = streams.home[i];
-              newTweets.push("<div>" + "@" + tweet.user + ":" + tweet.message + "time " + tweet.created_at +"</div>");
+              newTweets.push("<div><a href='timeline.html' target='_blank'>@" +tweet.user +"</a>"+ ":" + tweet.message + "time " + tweet.created_at.toDateString() +"</div>");
 
           }
           startTweets = totalTweets;
