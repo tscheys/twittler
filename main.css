@@ -1,6 +1,53 @@
-#banner {
-	background-color: "blue";
-}
+
+
 body {
 	font-family: "helvetica";
 }
+* {
+	margin: 0;
+	padding: 0;
+}
+button {
+	text-decoration: none;
+	border: none;
+	outline: none;
+	background-color: #19D467;
+	color: white;
+	font-size: 16px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+button:hover {
+	background-color: #21FF7E;
+	cursor: pointer;
+}
+a {
+	color: black;
+}
+small {
+	color: gray;
+	font-style: italic;
+}
+h3 {
+	padding-top: 10px;
+}
+#banner {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #19D467;
+	text-align: center;
+	color: white;
+}
+#content {
+	text-align: center;
+}
+#menu {
+	text-align: center;
+	padding-top: 10px;
+}
+.tweet {
+	padding-top: 10px;
+}
+
