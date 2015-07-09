@@ -16,7 +16,7 @@
 
           for(var i = totalTweets; 0 <= i; --i ) {
               tweet = streams.home[i];
-              newTweets.push("<div><a class='user' data-user=" + tweet.user + " href='' >@" +tweet.user +"</a>"+ ":" + tweet.message + "time " + tweet.created_at.fromNow() +"</div>");
+              newTweets.push("<div><a class='user' data-user=" + tweet.user + " href='' ><strong>@" +tweet.user +"</strong></a>"+ ":" + tweet.message + "  <small>" + tweet.created_at.fromNow() +"</small></div>");
           }
         
           var $feed = $(newTweets.join(''));
@@ -26,12 +26,12 @@
         //refreshFeed() is called when the document is loaded. This is to show any existing tweets when the user opens his twittler
         refreshFeed(); 
 
-        $("#newTweets").on("click", function () {
+        $("#menu").on("click", "#newTweets", function () {
           //On clicking the showNewTweets button, the feed will refresh itself by calling refreshFeed().
           refreshFeed();
          });
 
-        $("a").on("click", function(e) {
+        $("#content").on("click", "a.user", function(e) {
           e.preventDefault();
           $content.html('');
           var $name = $(this).data("user");
